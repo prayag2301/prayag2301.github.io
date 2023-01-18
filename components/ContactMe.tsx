@@ -66,7 +66,8 @@ function ContactMe({}: Props) {
 
                 <form
                 onSubmit={handleSubmit(onSubmit)} 
-                className='flex flex-col space-y-2 w-fit mx-auto'>
+                className='flex flex-col space-y-2 w-fit mx-auto'
+                suppressHydrationWarning>
                     <div className='flex space-x-2'>
                         <input {...register('name')} placeholder='Name' className='contactInput' type='text' />
                         <input {...register('email')} placeholder='Email' className='contactInput' type='email' />
@@ -78,7 +79,7 @@ function ContactMe({}: Props) {
                     <button 
                     type='submit'
                     className='bg-[teal] py-5 px-10 rounded-md text-black font-bold
-                    text-lg' suppressHydrationWarning>Submit</button>
+                    text-lg'>Submit</button>
                 </form>
             </div>
         </div>
