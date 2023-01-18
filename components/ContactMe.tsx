@@ -22,9 +22,9 @@ function ContactMe({}: Props) {
 
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
 
-    const [mounted, setMounted] = useState(false);
-    useEffect(() => setMounted(true), []);
-    if (!mounted) return null;
+    // const [mounted, setMounted] = useState(false);
+    // useEffect(() => setMounted(true), []);
+    // if (!mounted) return null;
 
     window.location.href = `mailto:prayagsharma2001@gmail?subject=${formData.subject}&
     body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
